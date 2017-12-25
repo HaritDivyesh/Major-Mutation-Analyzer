@@ -1,0 +1,90 @@
+1:LVR:POS:0:calc1.Calc1@calc1:7:10 |==> 0
+2:LVR:POS:NEG:calc1.Calc1@calc1:7:10 |==> -10
+3:LVR:POS:0:calc1.Calc1@calc1:8:5 |==> 0
+4:LVR:POS:NEG:calc1.Calc1@calc1:8:5 |==> -5
+5:AOR:*(int,int):%(int,int):calc1.Calc1@calc1:9:a * x |==> a % x
+6:AOR:*(int,int):+(int,int):calc1.Calc1@calc1:9:a * x |==> a + x
+7:AOR:*(int,int):-(int,int):calc1.Calc1@calc1:9:a * x |==> a - x
+8:AOR:*(int,int):/(int,int):calc1.Calc1@calc1:9:a * x |==> a / x
+9:AOR:-(int,int):%(int,int):calc1.Calc1@calc1:9:b - y |==> b % y
+10:AOR:-(int,int):*(int,int):calc1.Calc1@calc1:9:b - y |==> b * y
+11:AOR:-(int,int):+(int,int):calc1.Calc1@calc1:9:b - y |==> b + y
+12:AOR:-(int,int):/(int,int):calc1.Calc1@calc1:9:b - y |==> b / y
+13:AOR:+(int,int):%(int,int):calc1.Calc1@calc1:9:a * x + (b - y) |==> a * x % (b - y)
+14:AOR:+(int,int):*(int,int):calc1.Calc1@calc1:9:a * x + (b - y) |==> a * x * (b - y)
+15:AOR:+(int,int):-(int,int):calc1.Calc1@calc1:9:a * x + (b - y) |==> a * x - (b - y)
+16:AOR:+(int,int):/(int,int):calc1.Calc1@calc1:9:a * x + (b - y) |==> a * x / (b - y)
+17:LVR:POS:0:calc1.Calc1@calc1:10:2 |==> 0
+18:LVR:POS:NEG:calc1.Calc1@calc1:10:2 |==> -2
+19:AOR:%(int,int):*(int,int):calc1.Calc1@calc1:10:comp % 2 |==> comp * 2
+20:AOR:%(int,int):+(int,int):calc1.Calc1@calc1:10:comp % 2 |==> comp + 2
+21:AOR:%(int,int):-(int,int):calc1.Calc1@calc1:10:comp % 2 |==> comp - 2
+22:AOR:%(int,int):/(int,int):calc1.Calc1@calc1:10:comp % 2 |==> comp / 2
+23:LVR:0:POS:calc1.Calc1@calc1:10:0 |==> 1
+24:LVR:0:NEG:calc1.Calc1@calc1:10:0 |==> -1
+25:ROR:==(int,int):<=(int,int):calc1.Calc1@calc1:10:comp % 2 == 0 |==> comp % 2 <= 0
+26:ROR:==(int,int):>=(int,int):calc1.Calc1@calc1:10:comp % 2 == 0 |==> comp % 2 >= 0
+27:ROR:==(int,int):FALSE(int,int):calc1.Calc1@calc1:10:comp % 2 == 0 |==> false
+28:LVR:POS:0:calc1.Calc1@calc1:10:8 |==> 0
+29:LVR:POS:NEG:calc1.Calc1@calc1:10:8 |==> -8
+30:ROR:>=(int,int):==(int,int):calc1.Calc1@calc1:10:a >= 8 |==> a == 8
+31:ROR:>=(int,int):>(int,int):calc1.Calc1@calc1:10:a >= 8 |==> a > 8
+32:ROR:>=(int,int):TRUE(int,int):calc1.Calc1@calc1:10:a >= 8 |==> true
+33:COR:&&(boolean,boolean):==(boolean,boolean):calc1.Calc1@calc1:10:comp % 2 == 0 && a >= 8 |==> comp % 2 == 0 == a >= 8
+34:COR:&&(boolean,boolean):FALSE(boolean,boolean):calc1.Calc1@calc1:10:comp % 2 == 0 && a >= 8 |==> false
+35:COR:&&(boolean,boolean):LHS(boolean,boolean):calc1.Calc1@calc1:10:comp % 2 == 0 && a >= 8 |==> comp % 2 == 0
+36:COR:&&(boolean,boolean):RHS(boolean,boolean):calc1.Calc1@calc1:10:comp % 2 == 0 && a >= 8 |==> a >= 8
+37:LVR:POS:0:calc1.Calc1@calc1:11:9 |==> 0
+38:LVR:POS:NEG:calc1.Calc1@calc1:11:9 |==> -9
+39:AOR:+(int,int):%(int,int):calc1.Calc1@calc1:11:comp + 9 |==> comp % 9
+40:AOR:+(int,int):*(int,int):calc1.Calc1@calc1:11:comp + 9 |==> comp * 9
+41:AOR:+(int,int):-(int,int):calc1.Calc1@calc1:11:comp + 9 |==> comp - 9
+42:AOR:+(int,int):/(int,int):calc1.Calc1@calc1:11:comp + 9 |==> comp / 9
+43:LVR:POS:0:calc1.Calc1@calc1:11:2 |==> 0
+44:LVR:POS:NEG:calc1.Calc1@calc1:11:2 |==> -2
+45:AOR:/(int,int):%(int,int):calc1.Calc1@calc1:11:(comp + 9) / 2 |==> (comp + 9) % 2
+46:AOR:/(int,int):*(int,int):calc1.Calc1@calc1:11:(comp + 9) / 2 |==> (comp + 9) * 2
+47:AOR:/(int,int):+(int,int):calc1.Calc1@calc1:11:(comp + 9) / 2 |==> (comp + 9) + 2
+48:AOR:/(int,int):-(int,int):calc1.Calc1@calc1:11:(comp + 9) / 2 |==> (comp + 9) - 2
+49:LVR:POS:0:calc2.Calc2@calc2:7:2 |==> 0
+50:LVR:POS:NEG:calc2.Calc2@calc2:7:2 |==> -2
+51:LVR:POS:0:calc2.Calc2@calc2:8:7 |==> 0
+52:LVR:POS:NEG:calc2.Calc2@calc2:8:7 |==> -7
+53:AOR:/(int,int):%(int,int):calc2.Calc2@calc2:9:a / x |==> a % x
+54:AOR:/(int,int):*(int,int):calc2.Calc2@calc2:9:a / x |==> a * x
+55:AOR:/(int,int):+(int,int):calc2.Calc2@calc2:9:a / x |==> a + x
+56:AOR:/(int,int):-(int,int):calc2.Calc2@calc2:9:a / x |==> a - x
+57:AOR:*(int,int):%(int,int):calc2.Calc2@calc2:9:b * y |==> b % y
+58:AOR:*(int,int):+(int,int):calc2.Calc2@calc2:9:b * y |==> b + y
+59:AOR:*(int,int):-(int,int):calc2.Calc2@calc2:9:b * y |==> b - y
+60:AOR:*(int,int):/(int,int):calc2.Calc2@calc2:9:b * y |==> b / y
+61:AOR:+(int,int):%(int,int):calc2.Calc2@calc2:9:a / x + b * y |==> a / x % (b * y)
+62:AOR:+(int,int):*(int,int):calc2.Calc2@calc2:9:a / x + b * y |==> a / x * (b * y)
+63:AOR:+(int,int):-(int,int):calc2.Calc2@calc2:9:a / x + b * y |==> a / x - b * y
+64:AOR:+(int,int):/(int,int):calc2.Calc2@calc2:9:a / x + b * y |==> a / x / (b * y)
+65:LVR:POS:0:calc2.Calc2@calc2:10:2 |==> 0
+66:LVR:POS:NEG:calc2.Calc2@calc2:10:2 |==> -2
+67:AOR:%(int,int):*(int,int):calc2.Calc2@calc2:10:comp % 2 |==> comp * 2
+68:AOR:%(int,int):+(int,int):calc2.Calc2@calc2:10:comp % 2 |==> comp + 2
+69:AOR:%(int,int):-(int,int):calc2.Calc2@calc2:10:comp % 2 |==> comp - 2
+70:AOR:%(int,int):/(int,int):calc2.Calc2@calc2:10:comp % 2 |==> comp / 2
+71:LVR:POS:0:calc2.Calc2@calc2:10:1 |==> 0
+72:LVR:POS:NEG:calc2.Calc2@calc2:10:1 |==> -1
+73:ROR:==(int,int):<=(int,int):calc2.Calc2@calc2:10:comp % 2 == 1 |==> comp % 2 <= 1
+74:ROR:==(int,int):>=(int,int):calc2.Calc2@calc2:10:comp % 2 == 1 |==> comp % 2 >= 1
+75:ROR:==(int,int):FALSE(int,int):calc2.Calc2@calc2:10:comp % 2 == 1 |==> false
+76:LVR:POS:0:calc2.Calc2@calc2:10:25 |==> 0
+77:LVR:POS:NEG:calc2.Calc2@calc2:10:25 |==> -25
+78:ROR:<(int,int):!=(int,int):calc2.Calc2@calc2:10:a < 25 |==> a != 25
+79:ROR:<(int,int):<=(int,int):calc2.Calc2@calc2:10:a < 25 |==> a <= 25
+80:ROR:<(int,int):FALSE(int,int):calc2.Calc2@calc2:10:a < 25 |==> false
+81:COR:&&(boolean,boolean):==(boolean,boolean):calc2.Calc2@calc2:10:comp % 2 == 1 && a < 25 |==> comp % 2 == 1 == a < 25
+82:COR:&&(boolean,boolean):FALSE(boolean,boolean):calc2.Calc2@calc2:10:comp % 2 == 1 && a < 25 |==> false
+83:COR:&&(boolean,boolean):LHS(boolean,boolean):calc2.Calc2@calc2:10:comp % 2 == 1 && a < 25 |==> comp % 2 == 1
+84:COR:&&(boolean,boolean):RHS(boolean,boolean):calc2.Calc2@calc2:10:comp % 2 == 1 && a < 25 |==> a < 25
+85:LVR:POS:0:calc2.Calc2@calc2:11:3 |==> 0
+86:LVR:POS:NEG:calc2.Calc2@calc2:11:3 |==> -3
+87:AOR:/(int,int):%(int,int):calc2.Calc2@calc2:11:comp / 3 |==> comp % 3
+88:AOR:/(int,int):*(int,int):calc2.Calc2@calc2:11:comp / 3 |==> comp * 3
+89:AOR:/(int,int):+(int,int):calc2.Calc2@calc2:11:comp / 3 |==> comp + 3
+90:AOR:/(int,int):-(int,int):calc2.Calc2@calc2:11:comp / 3 |==> comp - 3

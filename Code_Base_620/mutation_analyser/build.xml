@@ -1,0 +1,24 @@
+<project name="MVCExample" default="compile" basedir=".">
+
+<!-- Clean up -->
+    <target name="clean" description="Clean">
+        <delete dir="bin"/>
+    </target>
+
+<!-- Initialize build -->
+    <target name="init">
+        <mkdir dir="bin"/>
+    </target>
+
+<!-- Compile the project -->
+    <target name="compile" depends="init" description="Compile">
+        <javac includeantruntime="true" 
+               srcdir="src"
+              destdir="bin"
+                debug="yes">
+	<classpath location="../major/config/config.jar"/>
+	<classpath location="lib/junit.jar"/>
+        </javac>
+    </target>
+
+</project>

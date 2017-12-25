@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2004, DoodleProject
+ All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+ Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 
+ Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
+ 
+ Neither the name of DoodleProject nor the names of its contributors
+ may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+-->
+<!-- $Revision: 1.1 $ $Date: 2006/01/06 21:52:40 $ -->
+<document>
+  <properties>
+    <title>User Guide :: Continued Fractions</title>
+  </properties>
+  <body>
+    <section name="Continued Fractions">
+      <p>
+        <b>numerics4j</b> provides the means to create and evaluate arbitrary
+        continued fractions.  See
+        <a target="_blank" href="http://mathworld.wolfram.com/ContinuedFraction.html">Continued Fraction</a>
+        for an in depth definition of continued fractions.  To create a
+        continued fraction, simply subclass
+        <a target="_blank"  href="../apidocs/net/sf/doodleproject/numerics4j/continuedfraction/ContinuedFraction.html">net.sf.doodleproject.numerics4j.continuedfraction.ContinuedFraction</a>
+        and provide implementations for the <code>getA</code> and <code>getB</code>
+        methods, which return the continued fraction terms.
+      </p>
+      <p>
+        The <code>ContinuedFraction</code> class is quite flexible with regards to
+        the variety of continued fractions it can represent.  For example it
+        can be used on very basic continued fractions, ones having all
+        constant terms like the
+        <a target="_blank" href="http://functions.wolfram.com/Constants/GoldenRatio/10/0001/">golden ratio</a>
+        constant: <source>ContinuedFraction goldenRatio = new ContinuedFraction() {
+    public double getA(int n, double x) {
+        return 1.0;
+    }
+
+    public double getB(int n, double x) {
+        return 1.0;
+    }
+};
+
+double x = goldenRatio.evaluate(0.0);  // returns 1.6180339887499... for all input values.</source>
+      </p>
+      <p>
+        Also, the <code>ContinuedFraction</code> class can represent continued
+        fractions whose terms are functions of their indices.  An example of
+        this type of continued fraction can be used to compute the constant
+        <a target="_blank" href="http://functions.wolfram.com/Constants/E/10/0013/"><i>e</i></a>:<source>ContinuedFraction e = new ContinuedFraction() {
+    public double getA(int n, double x) {
+        return n + 1.0;
+    }
+
+    public double getB(int n, double x) {
+        return n;
+    }
+};
+
+double x = 2.0 + 1.0 / e.evaluate(0.0);</source>
+      </p>
+      <p>
+        The most involved type of continued fractions are ones whose terms are
+        not only functions of their indices, but also functions of an
+        evaluation point.  A lot of transcendental functions have continued
+        fraction representations.  As such, these functions can be evaluated
+        numerically using the <code>ContinuedFraction</code> class.  For example,
+        the <a target="_blank" href="http://functions.wolfram.com/ElementaryFunctions/Exp/10/0003/">exponetial function</a>
+        can be evaulated with a continued fraction:<source>ContinuedFraction exponential = new ContinuedFraction() {
+    public double getA(int n, double x) {
+        if (n == 0) {
+            return 1.0;
+        } else if (n % 2 == 0) { // even
+            return 2.0;
+        } else { // odd
+            return n;
+        }
+    }
+
+    public double getB(int n, double x) {
+        if (n % 2 == 0) { // even
+            return x;
+        } else { // odd
+            return -x;
+        }
+    }
+};
+
+double x = exponential.evaluate(2.0); // Math.exp(2.0)
+double x = exponential.evaluate(4.0); // Math.exp(4.0)</source>
+      </p>
+    </section>
+  </body>
+</document>

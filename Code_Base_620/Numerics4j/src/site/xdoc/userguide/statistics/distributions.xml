@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2005-2007, DoodleProject
+ All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+ Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 
+ Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
+ 
+ Neither the name of DoodleProject nor the names of its contributors
+ may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+-->
+<!-- $Revision: 1.2 $ $Date: 2007/10/25 04:44:12 $ -->
+<document>
+  <properties>
+    <title>User Guide :: Statistical Distributions</title>
+  </properties>
+  <body>
+    <section name="Statistical Distributions">
+      <p>
+        <b>numerics4j</b> provides the means to compute the cumulative
+        distribution funtion (CDF) probabilities for common, continuous
+        distributions.  Along with CDF computations, <b>numerics4j</b>
+        provides for the evaluation of inverse CDF values.
+      </p>
+      <p>
+        To use a distribution, simply create a new distribution object with the
+        desired parameters.  With the distribution object, call the
+        <a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/ContinuousDistribution.html#cumulativeProbability(double)">cumulativeProbability</a>
+        method to compute CDF probabilities and the
+        <a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/ContinuousDistribution.html#inverseCumulativeProbability(double)">inverseCumulativeProbability</a>
+        method to compute inverse CDF values: <source>// create a distribution with the desired parameters
+NormalDistribution z = new NormalDistribution(0.0, 1.0);
+
+double p = z.cumulativeProbability(1.96);         // p = P(z &lt;= 1.96)
+double x = z.inverseCumulativeProbability(0.975); // P(z &lt;= x) = 0.975</source>
+      </p>
+      <subsection name="Supported Distributions">
+        <p>
+          The following distribution are supplied by <b>numerics4j</b>:
+          <table>
+            <tr><th>Distribution</th><th>Class</th><th>Parameters</th></tr>
+            <tr>
+              <td>Beta</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/BetaDistribution.html">BetaDistribution</a></td>
+              <td><div>alpha</div><div>beta</div></td>
+            </tr>
+            <tr>
+              <td>Binomial</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/BinomialDistribution.html">BinomialDistribution</a></td>
+              <td><div>number of trials</div><div>probability of success</div></td>
+            </tr>
+            <tr>
+              <td>Cauchy</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/CauchyDistribution.html">CauchyDistribution</a></td>
+              <td><div>location</div><div>scale</div></td>
+            </tr>
+            <tr>
+              <td>Chi-Squared</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/ChiSquaredDistribution.html">ChiSquaredDistribution</a></td>
+              <td>degrees of freedom</td>
+            </tr>
+            <tr>
+              <td>Exponential</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/ExponentialDistribution.html">ExponentialDistribution</a></td>
+              <td>mean</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/FDistribution.html">FDistribution</a></td>
+              <td><div>numerator degrees of freedom</div><div>denominator degrees of freedom</div></td>
+            </tr>
+            <tr>
+              <td>Gamma</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/GammaDistribution.html">GammaDistribution</a></td>
+              <td><div>alpha</div><div>beta</div></td>
+            </tr>
+            <tr>
+              <td>Geometric</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/GeometricDistribution.html">GeometricDistribution</a></td>
+              <td>probability of success</td>
+            </tr>
+            <tr>
+              <td>Hypergeometric</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/HypergeometricDistribution.html">HypergeometricDistribution</a></td>
+              <td><div>number of success in population</div><div>number of failures in population</div><div>sample size</div></td>
+            </tr>
+            <tr>
+              <td>Laplace</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/LaplaceDistribution.html">LaplaceDistribution</a></td>
+              <td><div>mean</div><div>scale</div></td>
+            </tr>
+            <tr>
+              <td>Logistic</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/LogisticDistribution.html">LogisticDistribution</a></td>
+              <td><div>mean</div><div>scale</div></td>
+            </tr>
+            <tr>
+              <td>Log Normal</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/LogNormalDistribution.html">LogNormalDistribution</a></td>
+              <td><div>mean</div><div>standard deviation</div></td>
+            </tr>
+            <tr>
+              <td>Negative Binomial</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/NegativeBinomialDistribution.html">NegativeBinomialDistribution</a></td>
+              <td><div>number of successes</div><div>probability of success</div></td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/NormalDistribution.html">NormalDistribution</a></td>
+              <td><div>mean</div><div>standard deviation</div></td>
+            </tr>
+            <tr>
+              <td>Poisson</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/PoissonDistribution.html">PoissonDistribution</a></td>
+              <td>mean</td>
+            </tr>
+            <tr>
+              <td>Rayleigh</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/RayleighDistribution.html">RayleighDistribution</a></td>
+              <td>scale</td>
+            </tr>
+            <tr>
+              <td>t</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/TDistribution.html">TDistribution</a></td>
+              <td>degrees of freedom</td>
+            </tr>
+            <tr>
+              <td>Uniform</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/UniformDistribution.html">UniformDistribution</a></td>
+              <td><div>lower bound</div><div>upper bound</div></td>
+            </tr>
+            <tr>
+              <td>Weibull</td>
+              <td><a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/WeibullDistribution.html">WeibullDistribution</a></td>
+              <td><div>shape</div><div>scale</div><div>location</div></td>
+            </tr>
+          </table>
+        </p>
+      </subsection>
+	  <subsection name="Inverse CDF's for Discrete Distributions">
+		Special care is given to computing the inverse CDF for discrete
+		distributions.  This is because of the inexactness of the mapping from
+		cumulative probabilities to quantiles.  As such, the return value,
+		<code>x</code>, of the <a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/statistics/distribution/DiscreteDistribution.html#inverseCumulativeProbability(double)">inverseCumulativeProbability</a>
+        method satifies the following to criteria:<source><![CDATA[For the distribution X and target probability p:
+x is the largest integer such that P(X <= x) <= p and
+x is the smallest integer such that P(X >= x) >= 1 - p]]></source>
+		For example, for a Binomial(10, 0.375) distribution:<source><![CDATA[BinomialDistribution b = new BinomialDistribution(10, 0.375);
+double p = 0.75;
+double x = b.inverseCumulativeProbability(p);
+// assert: b.cumulativeProbability(x) <= 0.75
+// assert: b.cumulativeProbability(x + 1) >= 0.75
+// assert: 1.0 - b.cumulativeProbability(x) >= 0.25
+// assert: 1.0 - b.cumulativeProbability(x + 1) <= 0.25]]></source>
+	  </subsection>
+    </section>
+  </body>
+</document>

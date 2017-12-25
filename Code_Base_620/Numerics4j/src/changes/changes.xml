@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2004-2007, DoodleProject
+ All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+ Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 
+ Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
+ 
+ Neither the name of DoodleProject nor the names of its contributors
+ may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+-->
+<!-- $Revision: 1.6 $ $Date: 2007/11/19 01:32:00 $ -->
+<document>
+  <properties>
+    <title>Feature Additions, Fixes, and Updates</title>
+  </properties>
+  <body>
+    <release version="1.3" date="November 18, 2007" description="Introduced random number generation.">
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Weibull distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random numbers using a linear congruential generator.</action>
+      <action dev="brentworden" type="add">Added ability to generate random numbers using java.lang.Math#random.</action>
+      <action dev="brentworden" type="add">Added ability to generate random numbers using java.util.Random.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Bernoulli distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Beta distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Binomial distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Cauchy distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Chi-Squared distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from an Exponential distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a F distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Gamma distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Geometric distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Laplace distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Logistic distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Log Normal distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Negative Binomial distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Normal distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Poisson distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Rayleigh distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a t distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Uniform distribution.</action>
+      <action dev="brentworden" type="add">Added ability to generate random variables from a Weibull distribution.</action>
+      <action dev="brentworden" type="add">Added root finding via Brent's method.</action>
+      <action dev="brentworden" type="update">Added a range data member to Uniform distribution to eliminate repeated calculations.</action>
+    </release>
+    <release version="1.2" date="November 14, 2005" description="Introduced discrete distributions.">
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Laplace distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Logistic distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Log Normal distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Rayleigh distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the PMF, CDF and, inverse CDF for the Binomial distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the PMF, CDF and, inverse CDF for the Geometric distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the PMF, CDF and, inverse CDF for the Hypergeometric distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the PMF, CDF and, inverse CDF for the Negative Binomial distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the PMF, CDF and, inverse CDF for the Poisson distribution.</action>
+      <action dev="brentworden" type="add">Added inverse error function.</action>
+      <action dev="brentworden" type="add">Added inverse hyperbolic cosine.</action>
+      <action dev="brentworden" type="add">Added inverse hyperbolic sine.</action>
+      <action dev="brentworden" type="add">Added inverse hyperbolic tangent.</action>
+      <action dev="brentworden" type="update">Changed inverse CDF for the Normal distribution to use the inverse error function routine.</action>
+    </release>
+    <release version="1.1" date="June 24, 2005" description="Introduced numerical integration.">
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Cauchy distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Uniform distribution.</action>
+      <action dev="brentworden" type="add">Added ability to create and evaluate power series.</action>
+      <action dev="brentworden" type="add">Added complementary error function.</action>
+      <action dev="brentworden" type="add">Added hyperbolic cosine.</action>
+      <action dev="brentworden" type="add">Added hyperbolic sine.</action>
+      <action dev="brentworden" type="add">Added hyperbolic tangent.</action>
+      <action dev="brentworden" type="add">Added numerical integration via Adaptive Quadrature.</action>
+      <action dev="brentworden" type="add">Added numerical integration via Romberg Integration.</action>
+      <action dev="brentworden" type="add">Added numerical integration via the extended Simpson's rule.</action>
+      <action dev="brentworden" type="add">Added numerical integration via the extended trapezoidal rule.</action>
+      <action dev="brentworden" type="add">Added root finding via Newton's method.</action>
+      <action dev="brentworden" type="add">Added root finding via the false position method.</action>
+      <action dev="brentworden" type="add">Added root finding via the secant method.</action>
+      <action dev="brentworden" type="update">Improved error function evaluation at special values.</action>
+    </release>
+    <release version="1.0" date="January 13, 2005" description="Initial release of numerics4j.">
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Beta distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Chi-Squared distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Exponential distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the F distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Gamma distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the Normal distribution.</action>
+      <action dev="brentworden" type="add">Added ability to compute the CDF and inverse CDF for the t distribution.</action>
+      <action dev="brentworden" type="add">Added ability to create and evaluate general continued fractions.</action>
+      <action dev="brentworden" type="add">Added ability to create and evaluate general infinite series.</action>
+      <action dev="brentworden" type="add">Added error function.</action>
+      <action dev="brentworden" type="add">Added log beta.</action>
+      <action dev="brentworden" type="add">Added log gamma.</action>
+      <action dev="brentworden" type="add">Added regularized gamma.</action>
+      <action dev="brentworden" type="add">Added regularized beta.</action>
+      <action dev="brentworden" type="add">Added root bracketting capabilities.</action>
+      <action dev="brentworden" type="add">Added root finding via the bisection method.</action>
+    </release>
+  </body>
+</document>

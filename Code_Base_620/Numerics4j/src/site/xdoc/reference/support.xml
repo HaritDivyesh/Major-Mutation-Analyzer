@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2005, DoodleProject
+ All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+ Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 
+ Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
+ 
+ Neither the name of DoodleProject nor the names of its contributors
+ may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+-->
+<!-- $Revision: 1.1 $ $Date: 2006/01/06 21:52:42 $ -->
+<document>
+  <properties>
+    <title>Support</title>
+  </properties>
+  <body>
+    <p>
+      This document provides information on getting support for
+      <b>numerics4j</b>  Most of these support features are hosted by
+      <a href="http://www.sourceforge.net">SourceForge</a>.
+    </p>
+    <section name="General Support">
+      <p>
+        If you need to ask a question about using <b>numerics4j</b>,
+		please <a href="http://sourceforge.net/tracker/?group_id=67565&amp;atid=518271">enter a support request</a>
+        describing the problem you are confronted with.  Be sure to browse
+        existing requests as they might address similar issues.
+      </p>
+    </section>
+    <section name="Bugs">
+      <p>
+        If you discover a bug while using <b>numerics4j</b>, feel free to
+        <a href="http://sourceforge.net/tracker/?group_id=67565&amp;atid=518270">enter a bug report</a>
+        detaling the error.  Be sure to browse existing bug to insure you are
+        not entering a duplicate.
+      </p>
+      <subsection name="Patches">
+        <p>
+          Patches to existing bugs are graciously accepted.  You are welcome to
+          <a href="http://sourceforge.net/tracker/?group_id=67565&amp;atid=518272">submit patches</a>
+          for any existing bug.  This will greatly expidite bug resolutions.
+        </p>
+      </subsection>
+    </section>
+    <section name="Feature Requests">
+      <p>
+        If there is an enhancement you would like added to the
+        <b>numerics4j</b>, feel free to <a href="http://sourceforge.net/tracker/?group_id=67565&amp;atid=518273">enter a feature request</a>
+        describing the new functionality.  Be sure to browse existing requests
+        to insure you are not entering a duplicate.
+      </p>
+      <subsection name="Patches">
+        <p>
+          As with bugs, patches for existing enhancements are graciously accepted.  You are welcome to
+          <a href="http://sourceforge.net/tracker/?group_id=67565&amp;atid=518272">submit patches</a>
+          for any enhancement.
+        </p>
+      </subsection>
+    </section>
+  </body>
+</document>

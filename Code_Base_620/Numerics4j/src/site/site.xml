@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2005-2007, DoodleProject
+ All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+ Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 
+ Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
+ 
+ Neither the name of DoodleProject nor the names of its contributors
+ may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+-->
+<!-- $Revision: 1.4 $ $Date: 2007/10/25 04:44:17 $ -->
+<project name="numerics4j">
+  <bannerLeft>
+    <name>DoodleProject</name>
+    <src>/images/doodleproject.jpg</src>
+    <href>http://doodleproject.sourceforge.net</href>
+  </bannerLeft>
+  <bannerRight>
+    <name>numerics4j</name>
+    <src>/images/numerics4j.jpg</src>
+    <href>index.html</href>
+  </bannerRight>
+  <body>
+    <links>
+      <item name="Numerics Library" href="http://doodleproject.sourceforge.net/numerics/index.html"/>
+    </links>
+    <menu name="numerics4j">
+      <item name="About numerics4j" href="/index.html"/>
+      <item name="Features" href="/changes-report.html"/>
+      <item name="Download" href="/download.html"/>
+      <item name="News and Status" href="/news.html"/>
+    </menu>
+    <menu name="User Guide" href="/userguide/index.html" collapse="true">
+      <item name="Continued Fractions" href="/userguide/continuedfractions.html"/>
+      <item name="Integration" href="/userguide/integration/index.html" collapse="true">
+        <item name="Adaptive Integrator" href="/userguide/integration/adaptiveintegrator.html"/>
+        <item name="Romberg Integrator" href="/userguide/integration/rombergintegrator.html"/>
+        <item name="Simpson's Integrator" href="/userguide/integration/simpsonsintegrator.html"/>
+        <item name="Trapezoidal Integrator" href="/userguide/integration/trapezoidalintegrator.html"/>
+      </item>
+      <item name="Random Numbers" href="/userguide/random.html"/>
+      <item name="Root Finding" href="/userguide/root/index.html" collapse="true">
+        <item name="Bisection Root Finder" href="/userguide/root/bisectionrootfinder.html"/>
+        <item name="Bracket" href="/userguide/root/bracket.html"/>
+        <item name="False Position Root Finder" href="/userguide/root/falsepositionrootfinder.html"/>
+        <item name="Newton Root Finder" href="/userguide/root/newtonrootfinder.html"/>
+        <item name="Secant Root Finder" href="/userguide/root/secantrootfinder.html"/>
+      </item>
+      <item name="Series" href="/userguide/series/index.html" collapse="true">
+        <item name="Power Series" href="/userguide/series/powerseries.html"/>
+        <item name="Series" href="/userguide/series/series.html"/>
+      </item>
+      <item name="Special Functions" href="/userguide/special/index.html" collapse="true">
+        <item name="Beta" href="/userguide/special/beta.html"/>
+        <item name="Error" href="/userguide/special/erf.html"/>
+        <item name="Gamma" href="/userguide/special/gamma.html"/>
+        <item name="Trigonometric" href="/userguide/special/trigonometric.html"/>
+      </item>
+      <item name="Statistical Distributions" href="/userguide/statistics/distributions.html"/>
+    </menu>
+    <menu name="Reference" href="/reference/index.html" collapse="true">
+      <item target="_blank" name="API" href="/apidocs/index.html"/>
+      <item name="Getting Started" href="/reference/gettingstarted.html"/>
+      <item name="Support" href="/reference/support.html"/>
+    </menu>
+    <menu ref="reports"/>
+  </body>
+</project>

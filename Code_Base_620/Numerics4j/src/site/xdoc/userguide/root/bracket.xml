@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2004-2005, DoodleProject
+ All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+ Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 
+ Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
+ 
+ Neither the name of DoodleProject nor the names of its contributors
+ may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+-->
+<!-- $Revision: 1.1 $ $Date: 2006/01/06 21:52:43 $ -->
+<document>
+  <properties>
+    <title>User Guide :: Bracket</title>
+  </properties>
+  <body>
+    <section name="Bracket">
+      <p>
+        The <a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/root/Bracket.html">net.sf.doodleproject.numerics4j.root.Bracket</a>
+        class provides the means to construct an interval known to contain at
+        least one root.  This is accomplished by taking a single, initial
+        pivot point and expanding outward from that point until a bracketing
+        interval is formed.  Once this interval is created, it can be used as a
+        starting point for root finding routines, such as the
+        <a href="bisectionrootfinder.html">bisection method</a>.
+      </p>
+      <p>
+        Constructing a bracking interval involve creating a
+        <code>Bracket</code> object for a particular
+        <a target="_blank" href="../../apidocs/net/sf/doodleproject/numerics4j/function/Function.html">net.sf.doodleproject.numerics4j.function.Function</a>
+        object.  Once, the bracketer is created, intervals can be created by
+        calling the <code>bracketOut</code> method providing an initial point
+        and a lower and upper bound for the interval.  The two bounds are not
+        critical in the construction of the interval and only serve to provide
+        numerical stability to the algorithm.  Here is an example of bracketing
+        roots for sine:
+        <source>Function sine = new Function() {
+    public double evaluate(double x) {
+        return Math.sin(x);
+    }
+};
+
+Bracket bracket = new Bracket(sine);
+
+// bracket a root near three
+double[] containsPi = bracket.bracketOut(-100.0, 3.0, 100.0);
+
+// bracket a root near six
+double[] contains2Pi = bracket.bracketOut(-100.0, 6.0, 100.0);</source>
+      </p>
+    </section>
+  </body>
+</document>

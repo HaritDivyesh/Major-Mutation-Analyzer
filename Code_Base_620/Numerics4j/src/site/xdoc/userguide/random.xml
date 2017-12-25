@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2007, DoodleProject
+ All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+ Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 
+ Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
+ 
+ Neither the name of DoodleProject nor the names of its contributors
+ may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+-->
+<!-- $Revision: 1.5 $ $Date: 2007/11/18 23:51:24 $ -->
+<document>
+  <properties>
+    <title>User Guide :: Random Numbers</title>
+  </properties>
+  <body>
+    <section name="Random Numbers">
+      <p>
+        <b>numerics4j</b> provides the means to generate random, floating-point
+        numbers uniformly distributed between 0 and 1.  Along with this basic
+        functionality, <b>numerics4j</b> provides the means to generate random
+        variables from many statistical distributions.
+      </p>
+      <subsection name="RNG">
+        <p>
+          The core of <b>numerics4j</b> random number generating capabilities is
+          centered around the <a target="_blank" href="apidocs/net/sf/doodleproject/numerics4j/random/RNG.html">RNG</a>
+          interface.  This defines the interface for all the random number
+          generators that produce random, floating-point numbers uniformly
+          distributed between 0 and 1.  The following core random number
+          generators are provided by <b>numerics4j</b>:
+          <table>
+            <tr><th>Generator</th><th>Description</th></tr>
+            <tr>
+              <td><a target="_blank" href="apidocs/net/sf/doodleproject/numerics4j/random/LinearCongurentialRNG.html">LinearCongurentialRNG</a></td>
+              <td>
+                Generic <a target="_blank" href="http://en.wikipedia.org/wiki/Linear_congruential_generator">linear congruential generator</a>
+                that can be constructed with arbitary modulus, multiplier, and
+                shift parameters.
+              </td>
+            </tr>
+            <tr>
+              <td><a target="_blank" href="apidocs/net/sf/doodleproject/numerics4j/random/MathRNG.html">MathRNG</a></td>
+              <td>
+                Simple random number generator that delegates random number
+                production to the <code>java.lang.Math#random()</code> method.
+              </td>
+            </tr>
+            <tr>
+              <td><a target="_blank" href="apidocs/net/sf/doodleproject/numerics4j/random/RandomRNG.html">RandomRNG</a></td>
+              <td>
+                Simple random number generator that delegates random number
+                production to a <code>java.util.Random</code> object.
+              </td>
+            </tr>
+          </table>
+        </p>
+      </subsection>
+      <subsection name="Random Variables">
+        <p>
+          <b>numerics4j</b> has the capability to generate random variables from
+          many statistical distributions using standard techniques and
+          algorithms.  These techniques rely on a <code>RNG</code> instance as a
+          source for random, floating-point numbers uniformly distributed
+          between 0 and 1.  Any <code>RNG</code> implementation can be utilized
+          by the random variables include custom developed implementations.  By
+          default, an instance of <code>RandomRNG</code> is utilized.  The
+          following core random variable generators are provided by <b>numerics4j</b>:
+          <table>
+            <tr><th>Distribution</th><th>Class</th><th>Parameters</th></tr>
+            <tr>
+              <td>Bernoulli</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/BernoulliRandomVariable.html">BernoulliRandomVariable</a></td>
+              <td>probability of success</td>
+            </tr>
+            <tr>
+              <td>Beta</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/BetaRandomVariable.html">BetaRandomVariable</a></td>
+              <td><div>alpha</div><div>beta</div></td>
+            </tr>
+            <tr>
+              <td>Binomial</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/BinomialRandomVariable.html">BinomialRandomVariable</a></td>
+              <td><div>number of trials</div><div>probability of success</div></td>
+            </tr>
+            <tr>
+              <td>Cauchy</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/CauchyRandomVariable.html">CauchyRandomVariable</a></td>
+              <td><div>location</div><div>scale</div></td>
+            </tr>
+            <tr>
+              <td>Chi-Squared</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/ChiSquaredRandomVariable.html">ChiSquaredRandomVariable</a></td>
+              <td>degrees of freedom</td>
+            </tr>
+            <tr>
+              <td>Exponential</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/ExponentialRandomVariable.html">ExponentialRandomVariable</a></td>
+              <td>mean</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/FRandomVariable.html">FRandomVariable</a></td>
+              <td><div>numerator degrees of freedom</div><div>denominator degrees of freedom</div></td>
+            </tr>
+            <tr>
+              <td>Gamma</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/GammaRandomVariable.html">GammaRandomVariable</a></td>
+              <td><div>alpha</div><div>beta</div></td>
+            </tr>
+            <tr>
+              <td>Geometric</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/GeometricRandomVariable.html">GeometricRandomVariable</a></td>
+              <td>probability of success</td>
+            </tr>
+            <tr>
+              <td>Laplace</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/LaplaceRandomVariable.html">LaplaceRandomVariable</a></td>
+              <td><div>mean</div><div>scale</div></td>
+            </tr>
+            <tr>
+              <td>Logistic</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/LogisticRandomVariable.html">LogisticRandomVariable</a></td>
+              <td><div>mean</div><div>scale</div></td>
+            </tr>
+            <tr>
+              <td>Log Normal</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/LogNormalRandomVariable.html">LogNormalRandomVariable</a></td>
+              <td><div>mean</div><div>standard deviation</div></td>
+            </tr>
+            <tr>
+              <td>Negative Binomial</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/NegativeBinomialRandomVariable.html">NegativeBinomialRandomVariable</a></td>
+              <td><div>number of successes</div><div>probability of success</div></td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/NormalRandomVariable.html">NormalRandomVariable</a></td>
+              <td><div>mean</div><div>standard deviation</div></td>
+            </tr>
+            <tr>
+              <td>Poisson</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/PoissonRandomVariable.html">PoissonRandomVariable</a></td>
+              <td>mean</td>
+            </tr>
+            <tr>
+              <td>Rayleigh</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/RayleighRandomVariable.html">RayleighRandomVariable</a></td>
+              <td>scale</td>
+            </tr>
+            <tr>
+              <td>t</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/TRandomVariable.html">TRandomVariable</a></td>
+              <td>degrees of freedom</td>
+            </tr>
+            <tr>
+              <td>Uniform</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/UniformRandomVariable.html">UniformRandomVariable</a></td>
+              <td><div>lower bound</div><div>upper bound</div></td>
+            </tr>
+            <tr>
+              <td>Weibull</td>
+              <td><a target="_blank" href="../apidocs/net/sf/doodleproject/numerics4j/random/WeibullRandomVariable.html">WeibullRandomVariable</a></td>
+              <td><div>shape</div><div>scale</div><div>location</div></td>
+            </tr>
+          </table>
+        </p>
+      </subsection>
+    </section>
+  </body>
+</document>

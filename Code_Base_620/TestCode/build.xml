@@ -1,0 +1,51 @@
+<project name="TestCode" default="compile" basedir=".">
+
+<!-- ##############################################
+      Path to Major and Mutation options 
+      Use -Dmutation="=mml-file" to set path to mml-file
+     ############################################## -->
+    <property name="mutation" value=":ALL"/>
+    <property name="mutator" value="-XMutator${mutation}"/>
+    <property name="major" value="../major/bin/javac"/>
+
+
+<!-- Target to clean up -->
+    <target name="clean" description="Clean">
+        <delete dir="bin"/>
+        <delete>
+            <fileset dir="." includes="*.csv"/>
+            <fileset dir="." includes="*.log"/>
+	    </delete>
+    </target>
+
+<!-- Target to initialize build -->
+    <target name="init">
+        <mkdir dir="bin"/>
+    </target>
+
+<!-- Target to compile the project -->
+    <target name="compileCode" depends="init" description="Compile">
+        <javac includeantruntime="true" 
+               srcdir="src"
+              destdir="bin"
+                debug="yes"
+	             fork="yes"
+	       executable="${major}">
+
+            <compilerarg value="${mutator}"/>
+        </javac>
+    </target>
+
+<!-- Target to compile the test suite -->
+    <target name="compile" depends="compileCode" description="Compile all tests">
+        <javac includeantruntime="true" 
+               srcdir="test"
+              destdir="bin"
+                debug="yes"
+	             fork="yes"
+	       executable="${major}">
+		<classpath location="lib/junit.jar"/>
+        </javac>
+    </target>
+
+</project>

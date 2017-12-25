@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2004-2007, DoodleProject
+ All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+ Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 
+ Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
+ 
+ Neither the name of DoodleProject nor the names of its contributors
+ may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+-->
+<!-- $Revision: 1.2 $ $Date: 2007/10/25 04:44:16 $ -->
+<document>
+  <properties>
+    <title>User Guide :: Table of Contents</title>
+  </properties>
+  <body>
+    <section name="User Guide - Table of Contents">
+      <p>
+        <ul>
+          <li><a href="continuedfractions.html">Continued Fractions</a></li>
+          <li>
+            <a href="integration/index.html">Integration</a>
+            <ul>
+              <li><a href="integration/adaptiveintegrator.html">Adaptive Integrator</a></li>
+              <li><a href="integration/rombergintegrator.html">Romberg Integrator</a></li>
+              <li><a href="integration/simpsonsintegrator.html">Simpson's Integrator</a></li>
+              <li><a href="integration/trapezoidalintegrator.html">Trapezoidal Integrator</a></li>
+            </ul>
+          </li>
+          <li><a href="random.html">Random Numbers</a></li>
+          <li>
+            <a href="root/index.html">Root Finding</a>
+            <ul>
+              <li><a href="root/bisectionrootfinder.html">Bisection Root Finder</a></li>
+              <li><a href="root/bracket.html">Bracket</a></li>
+              <li><a href="root/falsepositionrootfinder.html">False Position Root Finder</a></li>
+              <li><a href="root/newtonrootfinder.html">Newton Root Finder</a></li>
+              <li><a href="root/secantrootfinder.html">Secant Root Finder</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="series/index.html">Series</a>
+            <ul>
+              <li><a href="series/powerseries.html">Power Series</a></li>
+              <li><a href="series/series.html">Series</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="special/index.html">Special Functions</a>
+            <ul>
+              <li><a href="special/beta.html">Beta</a></li>
+              <li><a href="special/erf.html">Error Function</a></li>
+              <li><a href="special/gamma.html">Gamma</a></li>
+              <li><a href="special/trigonometric.html">Trigonometric</a></li>
+            </ul>
+          </li>
+          <li><a href="statistics/distributions.html">Statistical Distributions</a></li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</document>
